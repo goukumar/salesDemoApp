@@ -1,0 +1,261 @@
+/**
+ * Reset
+ */
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f7;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem; }
+
+h1, h2 {
+  color: #2e3034;
+  margin: 0; }
+
+h2 {
+  font-size: 1.25rem; }
+
+.content-view {
+  padding: 1.25rem;
+  max-width: 414px;
+  width: 100%;
+  margin: 0 auto; }
+
+.filter-results {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  width: 22.9375rem;
+  padding: 1.25rem;
+  margin: 1.875rem 0;
+  box-shadow: 0 3px 10px 5px #ecedee; }
+  .filter-results input[type=text], .filter-results input[type=number] {
+    background-color: #f6f6f7;
+    border: 1px solid #6d7178;
+    color: #54575d;
+    font-size: 0.875rem; }
+  .filter-results .c-name input {
+    border-radius: 0.625rem;
+    padding: 20px 10px;
+    width: 100%; }
+  .filter-results .range label {
+    color: #54575d;
+    display: block;
+    margin: 1.25rem 0; }
+  .filter-results .range .custom-range {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12.5rem; }
+  .filter-results .range input[type=number] {
+    border-radius: 0.625rem;
+    margin-left: 1.125rem;
+    padding: 0.625rem 0;
+    width: 6.25rem;
+    text-align: center; }
+  .filter-results button {
+    border: 2px solid #121315;
+    border-radius: 0.3125rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #37393d;
+    margin-top: 1.25rem;
+    padding: 0.625rem;
+    text-transform: uppercase;
+    width: 100%; }
+
+.sales-info table, .top-performers table {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  width: 100%;
+  box-shadow: 0 3px 10px 5px #ecedee;
+  border-collapse: collapse; }
+  .sales-info table th, .sales-info table td, .top-performers table th, .top-performers table td {
+    padding: 0.9375rem 0;
+    border-bottom: 1px solid #e1e2e5; }
+  .sales-info table th:first-child,
+  .sales-info table td:first-child, .top-performers table th:first-child,
+  .top-performers table td:first-child {
+    padding-left: 1.25rem; }
+  .sales-info table th:last-child,
+  .sales-info table td:last-child, .top-performers table th:last-child,
+  .top-performers table td:last-child {
+    padding-right: 1.25rem;
+    text-align: right; }
+  .sales-info table th, .top-performers table th {
+    border-width: 2px;
+    font-size: 0.875rem;
+    text-align: left;
+    color: #6d7178;
+    text-transform: uppercase;
+    width: 30%; }
+  .sales-info table th:last-child, .top-performers table th:last-child {
+    text-align: right;
+    width: 40%; }
+
+.sales-info-heading {
+  position: relative;
+  margin: 1.25rem 0; }
+  .sales-info-heading h2 {
+    display: inline-block; }
+  .sales-info-heading .refresh {
+    background: none;
+    border: none;
+    position: absolute;
+    text-transform: uppercase;
+    right: 0;
+    bottom: 0;
+    cursor: pointer; }
+
+.sales-info tbody {
+  font-size: 0.875rem;
+  color: #404247; }
+
+.sales-info tfoot {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #404247; }
+  .sales-info tfoot td {
+    border-bottom: none;
+    padding: 0.3125rem 0; }
+
+.sales-info .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem 0; }
+  .sales-info .pagination .prev-arrow, .sales-info .pagination .next-arrow {
+    background: none;
+    border: none;
+    color: #007b94;
+    cursor: pointer; }
+    .sales-info .pagination .prev-arrow.disabled, .sales-info .pagination .next-arrow.disabled {
+      color: #adb1b8;
+      cursor: default; }
+  .sales-info .pagination .prev-arrow {
+    margin-right: 1.5625rem; }
+  .sales-info .pagination .next-arrow {
+    margin-left: 1.5625rem; }
+  .sales-info .pagination ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .sales-info .pagination ul li {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      line-height: 40px; }
+      .sales-info .pagination ul li button {
+        border: none;
+        background: no-repeat;
+        color: #007b94;
+        cursor: pointer; }
+    .sales-info .pagination ul li.active {
+      background-color: #007b94;
+      color: #fff;
+      border-radius: 50%; }
+      .sales-info .pagination ul li.active button {
+        color: #fff;
+        cursor: default; }
+
+.top-performers h2 {
+  margin: 1.25rem 0; }
+
+.top-performers tr:last-child td {
+  border-bottom: none; }
+
+.flag-icon {
+  background-image: url("../icons/flag.gif");
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-size: cover; }
+
+.spinner {
+  border: 6px solid #e1e2e5;
+  border-radius: 50%;
+  border-top: 6px solid #121315;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.custom-range {
+  -webkit-appearance: none;
+  border-radius: 8px;
+  height: 8px;
+  background: #e1e2e5;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#309ab5, #309ab5);
+  background-size: 0 100%;
+  outline: none;
+  width: 100%; }
+
+.custom-range::-webkit-slider-thumb {
+  box-shadow: none;
+  height: 25px;
+  width: 25px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #309ab5;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  margin-top: -8px; }
+
+.custom-range::-moz-range-thumb {
+  box-shadow: none;
+  height: 25px;
+  width: 25px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #309ab5;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  margin-top: -8px; }
+
+.custom-range::-ms-thumb {
+  box-shadow: none;
+  height: 25px;
+  width: 25px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #309ab5;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  margin-top: -8px; }
+
+.custom-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  height: 8px; }
+
+.custom-range::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  height: 8px; }

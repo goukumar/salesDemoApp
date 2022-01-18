@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="../app/scripts/app.js" defer></script>
+</head>
+<body>
+    <!-- <div class="wrapper"> -->
+        <section class="content-view">
+            <h1>Global Sales</h1>
+
+            <!-- filter results -->
+            <div class="filter-results">
+                <form class="filters">
+                    <div class="field c-name">
+                        <input type="text" placeholder="Company" name="cname" aria-label="Enter company name">
+                    </div>
+                    <div class="field range">
+                        <label for="range">Minimum Sales ($)</label>
+                        <input type="range" id="range" class="custom-range" name="minrange" min="0" max="" value="0" step="1">
+                        <input type="number" min="0" max="" aria-label="minimum sales range">
+                    </div>
+                    <button>Filter Results</button>
+                </form>
+            </div>
+            <!-- END: filter results-->
+
+            <!-- Sales Info -->
+            <div class="sales-info">
+                <div class="sales-info-heading">
+                    <h2>Sales Data</h2>
+                    <button class="refresh">Refresh Data</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>COMPANY</th>
+                            <th>MONTHLY SALES</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sales-results">
+                        <!-- sales results -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Page Sales Subtotal</td>
+                            <td class="page-subtotal"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total Sales</td>
+                            <td class="total-sale"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="pagination">
+                    <button class="prev-arrow"> &lt; </button>
+                    <ul>
+                       <!-- pagination -->
+                    </ul>
+                    <button class="next-arrow"> &gt; </button>
+                </div>
+            </div>
+            <!-- END: Sales Info-->
+
+            <div class="top-performers">
+                <h2>Top Performers ($800+ / month)</h2>
+                <table>
+                    <tr>
+                        <td>Number of Clients</td>
+                        <td class="clients"></td>
+                    </tr>
+                    <tr>
+                        <td>Average Monthly Sales</td>
+                        <td><span class="symbol">$</span><span class="average-sale"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    <!-- </div> -->
+</body>
+</html>

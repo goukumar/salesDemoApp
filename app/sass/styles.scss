@@ -1,0 +1,261 @@
+@import './variables';
+@import './mixin';
+
+/**
+ * Reset
+ */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+      margin: 0; 
+      padding: 0;
+      background-color: $bg-color;
+      font-family: $font-family; 
+      font-size: $html-font-size;
+}
+
+h1 {
+    margin: 0;
+    font-size: rem(24);
+}
+
+h1, h2 {
+    color: $heading-color;
+    margin: 0; 
+}
+
+h2 {
+    font-size: rem(20);
+}
+
+.content-view {
+    padding: rem(20);
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.filter-results {
+    background-color: $secondary-color;
+    border-radius: rem(10);
+    width: rem(367);
+    padding: rem(20);
+    margin: rem(30) 0;
+    box-shadow: 0 3px 10px 5px $box-shadow;
+    
+    input[type=text], input[type=number] {
+        background-color: $bg-color;
+        border: 1px solid $input-border-color;
+        color: $secondary-text-color;
+        font-size: rem(14);
+    }
+    .c-name {
+        input {
+            border-radius: rem(10);
+            padding: 20px 10px;
+            width: 100%;
+        }
+    }
+    
+    .range {
+        label {
+            color: $secondary-text-color;
+            display: block;
+            margin: rem(20) 0;
+        }
+
+        .custom-range {
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(200);
+        }
+        
+        input[type=number] {
+            border-radius: rem(10);
+            margin-left: rem(18);
+            padding: rem(10) 0;
+            width: rem(100);
+            text-align: center;
+        }
+    }
+
+    button {
+        border: 2px solid $btn-border-color;
+        border-radius: rem(5);
+        color: $secondary-color;
+        cursor: pointer;
+        background-color: $primary-btn-color;
+        margin-top: rem(20);
+        padding: rem(10);
+        text-transform: uppercase;
+        width: 100%;
+    }
+}
+
+.sales-info, .top-performers {
+    table {
+        background-color: $secondary-color;
+        border-radius: rem(10);
+        width: 100%;
+        box-shadow: 0 3px 10px 5px $box-shadow;
+        border-collapse: collapse;
+        
+        th,td {
+            padding: rem(15) 0;
+            border-bottom: 1px solid $row-border;
+        }
+        th:first-child, 
+        td:first-child
+        {
+            padding-left: rem(20);   
+        }
+        th:last-child, 
+        td:last-child {
+            padding-right: rem(20); 
+            text-align: right; 
+        }
+        th {
+            border-width: 2px;
+            font-size: rem(14);
+            text-align: left;
+            color: $table-heading-color;
+            text-transform: uppercase;
+            width: 30%;
+        }
+        th:last-child{
+            text-align: right;
+            width: 40%;
+        }
+    }
+}
+
+.sales-info {
+    &-heading {
+        position: relative;
+        margin: rem(20) 0;
+
+        h2 {
+            display: inline-block;
+        }
+        .refresh {
+            background: none;
+            border: none;
+            position: absolute;
+            text-transform: uppercase;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+    }
+    tbody {
+        font-size: rem(14);
+        color: $primary-text-color;
+    }
+    tfoot {
+        font-size: rem(14);
+        font-weight: 700;
+        color: $primary-text-color;
+       
+        td {
+            border-bottom:none;
+            padding: rem(5) 0;
+        }
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: rem(20) 0;
+
+        .prev-arrow, .next-arrow {
+            background: none;
+            border: none;
+            color: $pagination-color;
+            cursor: pointer;
+            &.disabled {
+                color: $disabled-arrow-color;
+                cursor: default;
+            }
+        }
+        .prev-arrow {
+            margin-right: rem(25);
+        }
+        .next-arrow {
+            margin-left: rem(25);
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                
+                button {
+                    border: none;
+                    background: no-repeat;
+                    color: $pagination-color;
+                    cursor: pointer;
+                }
+                    
+            }
+            li.active {
+                background-color: $pagination-color;
+                color: $secondary-color;
+                border-radius: 50%;
+                button {
+                    color: $secondary-color;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+.top-performers {
+        h2 {
+            margin: rem(20) 0;
+        }
+        tr:last-child {
+            td {
+                border-bottom: none;
+            }
+        }
+    
+}
+.flag-icon {
+    background-image: url('../icons/flag.gif');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    background-size: cover;
+
+}
+.spinner {
+  border: 6px solid $range-track-color;
+  border-radius: 50%;
+  border-top: 6px solid $dark-gray;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@import './range';

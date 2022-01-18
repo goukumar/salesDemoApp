@@ -1,0 +1,19 @@
+{
+  "name": "sales",
+  "version": "1.0.0",
+  "description": "Representation of client and sales data.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "concurrently \"live-server --watch=./sass --no-css-inject\" \"npm run sass\"",
+    "sass": "node-sass --watch app/sass/ -o public/css/",
+    "start": "live-server --open=./public/sales.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gourav Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1"
+  }
+}
